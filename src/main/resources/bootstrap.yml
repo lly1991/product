@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: product
+  cloud:
+    config:
+      discovery:
+        enabled: true
+        service-id: CONFIG-SERVER-MASTER
+      profile: dev
+eureka:
+  client:
+    service-url:
+      defaultZone: http://master:8000/eureka/,http://slave:8001/eureka/
+#      uri: http://localhost:8100
+
+#management:
+#  security:
+#    enabled: false
